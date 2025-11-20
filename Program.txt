@@ -1,0 +1,48 @@
+﻿//1.Common Language Runtime это среда выполнения, для .NET это движок
+//2.я не списывал!!!(просто увеличенный int, примерно в два раза)
+//3.я не списывал!!!(реально не знаю, но == это если равно)
+//4.for - повторяет цикл определённое количество раз, while - повторяет цикл пока условие верно, do...while - то же что и while но, 1 раз срабатыват до проверки
+//5.то, что идентифицирует метод для компилятора, имя и параметры метода.
+//6.int[] x = new int[5] 
+//7.поле это переменная привязанная к класу, а свойство блок код определяющий таковую. свойства нужны для ограничения доступа.
+//8.класс без обьектов, только с полями и методами. нет, только статические
+//9.для удобного изменения строки без сложного кода. когда строка может не соответсвовать нужному формату(Caps, точки и т.д.)
+//10.неопределённый тип данных, вроде var. List<> x = new List<T>9();
+
+//11.практическое задание N1:
+int[] MyMetod(int[] x)
+{
+    List<int> y = new List<int>();
+    foreach (int i in x)
+    {
+        if (x[i]%2 == 0)
+            y.Add(i);
+    
+    }
+
+    return y;
+}
+
+public class Book
+{
+    public string Title {  get; set; }
+    public int PageCount { get; set; }
+
+    public Book (string title, int pageCount)
+    {
+        Title = title;
+        PageCount = pageCount;
+    }
+}
+
+//12.практическое задание N2:
+public class Programm
+{
+    public void Main()
+    {
+        List<Book> books = new List<Book>();
+        books.Add(new Book("The Lord Of The Rings", 1096));
+        books.Add(new Book("Harry Potter", 912));
+        books.Add(new Book("Hronics of Narnia", 3636));
+    }
+}
